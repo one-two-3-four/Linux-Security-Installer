@@ -1,52 +1,52 @@
 Linux Security Installer For ubuntu & Debian
 # Linux Security Installer
 
-📦 سكربت شامل لتثبيت أدوات الحماية والخصوصية لنظام Ubuntu/Debian.
+📦 A comprehensive script to install security and privacy tools for Ubuntu/Debian systems.
 
-## ✅ الوظائف التي يقوم بها:
-- تحديث النظام
-- تمكين وتكوين الجدار الناري (UFW)
-- تثبيت أدوات فحص الثغرات مثل Lynis و Rkhunter
-- تثبيت أدوات التشفير مثل GnuPG و VeraCrypt
-- تثبيت أدوات العزل مثل Firejail و Flatpak
-- تثبيت أدوات الخصوصية مثل Tor Browser و MAT2
-- أدوات أمان الشبكة مثل Wireshark و Fail2Ban
-- إزالة برامج تتبع المستخدم غير المرغوبة
+## ✅ Features:
+- System update and upgrade
+- Enable and configure UFW firewall
+- Install vulnerability scanners (Lynis, Rkhunter, etc.)
+- Install encryption tools (GnuPG, VeraCrypt, eCryptfs)
+- Install sandboxing tools (Firejail, Flatpak)
+- Install privacy tools (Tor Browser, MAT2, BleachBit)
+- Install network security tools (Wireshark, Nmap, Fail2Ban, etc.)
+- Remove privacy-invasive default packages
 
 ---
 
-## ⚙️ طريقة الاستخدام:
+## ⚙️ Usage:
 
-1. افتح الطرفية (Terminal)
-2. أنشئ الملف:
+1. Open your terminal
+2. Create the script file:
 ```bash
 nano install-security.sh
 ```
-3. الصق محتوى السكربت بداخله
-4. احفظ وأغلق الملف: `Ctrl + O` ثم `Enter` ثم `Ctrl + X`
-5. اجعل السكربت قابلًا للتنفيذ:
+3. Paste the script contents into the file
+4. Save and exit: `Ctrl + O`, then `Enter`, then `Ctrl + X`
+5. Make it executable:
 ```bash
 chmod +x install-security.sh
 ```
-6. شغّله:
+6. Run the script:
 ```bash
 ./install-security.sh
 ```
 
 ---
 
-## 🛡️ ملاحظات أمان:
-- يجب تشغيل السكربت بصلاحيات sudo
-- بعض الأدوات قد تتطلب إعدادًا يدويًا لاحقًا (مثل Snort, Firejail Profiles)
-- تأكد من مراجعة إعدادات الجدار الناري بعد التثبيت
+## 🛡️ Security Notes:
+- Run the script with sudo privileges
+- Some tools may require manual configuration post-install (e.g., Snort, Firejail profiles)
+- Review UFW and Lynis configurations for optimal results
 
 ---
 
-## 🧪 اختياري (تخصيص لاحقًا):
-- إضافة قوائم تفاعلية (Y/N) لاختيار الأدوات
-- إنشاء واجهة رسومية لاحقًا عبر `zenity` أو `whiptail`
+## 🧪 Optional (Future Enhancements):
+- Add interactive (Y/N) options per tool
+- Create a graphical interface using `zenity` or `whiptail`
 
 ---
 
-## 📜 الترخيص:
-هذا السكربت مفتوح المصدر ومتاح للاستخدام الشخصي والتعليم فقط.
+## 📜 License:
+This script is open source and intended for personal and educational use only.
