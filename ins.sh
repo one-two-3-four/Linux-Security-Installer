@@ -4,13 +4,13 @@ set -e
 
 # Initial Notice
 clear
-echo "🚨 Linux Security Installer Script (Ubuntu/Debian)"
+echo "Linux Security Installer Script (Ubuntu/Debian)"
 echo "It's recommended to run this on a fully updated system with sudo privileges."
 echo "This script will install tools for privacy, encryption, firewall, system auditing, and more."
 echo
 read -p "Do you want to proceed? (y/n): " confirm
 if [[ $confirm != "y" && $confirm != "Y" ]]; then
-  echo "❌ Installation canceled by user."
+  echo "Installation canceled by user."
   exit 1
 fi
 
