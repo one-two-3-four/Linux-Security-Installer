@@ -2,57 +2,57 @@
 
 set -e
 
-# 🧠 التنبيه الأولي
+# 🧠 Initial Notice
 clear
-echo "🚨 سكربت تثبيت أدوات الحماية على Linux (Ubuntu/Debian)"
-echo "يُنصح بتشغيله على نظام محدث وبصلاحيات sudo"
-echo "سيتم تثبيت أدوات الخصوصية، التشفير، الجدار الناري، فحص النظام، وأكثر"
+echo "🚨 Linux Security Installer Script (Ubuntu/Debian)"
+echo "It's recommended to run this on a fully updated system with sudo privileges."
+echo "This script will install tools for privacy, encryption, firewall, system auditing, and more."
 echo
-read -p "هل ترغب في المتابعة؟ (y/n): " confirm
+read -p "Do you want to proceed? (y/n): " confirm
 if [[ $confirm != "y" && $confirm != "Y" ]]; then
-  echo "❌ تم الإلغاء من قبل المستخدم."
+  echo "❌ Installation canceled by user."
   exit 1
 fi
 
-# 🧱 تحديث النظام أولاً
+# 🧱 System Update
 sudo apt update && sudo apt upgrade -y
 
-# 🔥 أدوات الجدار الناري
+# 🔥 Firewall Tools
 sudo apt install -y ufw gufw
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw enable
 
-# 🔍 أدوات فحص النظام
+# 🔍 System Auditing Tools
 sudo apt install -y lynis chkrootkit rkhunter tiger
 
-# 🔐 أدوات التشفير
+# 🔐 Encryption Tools
 sudo apt install -y veracrypt gnupg ecryptfs-utils
 
-# 🧱 أدوات العزل
+# 🧱 Sandboxing Tools
 sudo apt install -y firejail flatpak snapd apparmor-utils
 
-# 🧽 أدوات الخصوصية والتنظيف
+# 🧽 Privacy & Cleaning Tools
 sudo apt install -y torbrowser-launcher mat2 bleachbit
 
-# 🌐 أدوات الشبكة والأمان
+# 🌐 Network Security Tools
 sudo apt install -y nmap wireshark fail2ban snort suricata psad
 
-# 🔑 إدارة كلمات المرور
+# 🔑 Password Managers
 sudo apt install -y keepassxc pass
 
-# 📶 VPN
+# 📶 VPN Clients
 sudo apt install -y openvpn wireguard
 
-# 🧾 مراقبة الأنشطة
+# 🧾 Activity Monitoring
 sudo apt install -y auditd logwatch sysdig
 
-# 🧼 إزالة البرامج التي تضر بالخصوصية
+# 🧼 Remove Privacy-Invasive Packages
 sudo apt remove -y popularity-contest apport whoopsie zeitgeist
 
-# 🔄 تحديث القواعد الأمنية
+# 🔄 Update Security Rules
 sudo rkhunter --update && sudo rkhunter --propupd
 
 echo
-echo "✅ تم تثبيت الأدوات الأمنية بنجاح!"
-echo "يرجى مراجعة UFW و Lynis و Firejail بعد الاستخدام لتخصيص الإعدادات حسب احتياجك."
+echo "✅ Security tools installed successfully!"
+echo "Please review UFW, Lynis, and Firejail settings to further customize your system."
