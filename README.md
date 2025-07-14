@@ -17,20 +17,14 @@ Linux Security Installer For ubuntu & Debian
 
 ## ⚙️ Usage:
 
-1. Open your terminal
-2. Create the script file:
-```bash
-nano install-security.sh
+1. mod
+chmod +x ins.sh
+
+2. Run
 ```
-3. Paste the script contents into the file
-4. Save and exit: `Ctrl + O`, then `Enter`, then `Ctrl + X`
-5. Make it executable:
+Run the script:
 ```bash
-chmod +x install-security.sh
-```
-6. Run the script:
-```bash
-./install-security.sh
+./ins.sh
 ```
 
 ---
