@@ -1,4 +1,3 @@
-Linux Security Installer For ubuntu & Debian
 # Linux Security Installer
 
 A comprehensive script to install security and privacy tools for Ubuntu/Debian systems.
